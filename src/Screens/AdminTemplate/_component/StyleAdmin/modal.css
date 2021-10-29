@@ -1,0 +1,10 @@
+.ant-modal {
+    top: 50px !important;
+}
+.selectStyle select {
+    border: 1px solid #1c1d1f;
+    height: 3.5rem;
+    width: 100%;
+    margin-bottom: 0.5rem;
+    padding: 0 1rem;
+}

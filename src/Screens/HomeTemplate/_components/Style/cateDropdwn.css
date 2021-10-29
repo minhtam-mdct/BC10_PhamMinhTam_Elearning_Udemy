@@ -1,0 +1,103 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+.container-drop {
+    position: relative;
+    display: block;
+}
+.content-menu {
+    left: -1rem;
+}
+.dropdown {
+    z-index: 999;
+    cursor: pointer;
+}
+
+.dropdown > li {
+    /* Top Level */
+    float: left;
+}
+.dropdown button:hover {
+    color: #5624d0;
+}
+.dropdown ul {
+    border: 1px solid #d1d7dc;
+    width: 16rem;
+    min-height: 40rem;
+    padding-top: 1rem;
+}
+
+.dropdown li span::after {
+    position: absolute;
+    font-family: sans-serif;
+    content: "\003e";
+    right: 10%;
+}
+.dropdown li span:hover {
+    color: #5624d0;
+}
+.dropdown > li > span {
+    display: block;
+    background: white;
+}
+.dropdown > li:hover > span {
+    color: #5624d0;
+}
+
+.dropdown > li > ul {
+    /* Second Level */
+    display: none;
+    background: white;
+}
+/* .dropdown > li:hover > ul {
+    display: block;
+    position: absolute;
+} */
+.container-drop:hover .dropdown > li > ul {
+    display: block;
+    position: absolute;
+}
+.dropdown > li > ul > li > span {
+    display: block;
+    padding: 0.4rem 1.6rem;
+}
+.dropdown > li > ul > li:hover > span {
+    color: #5624d0;
+}
+.dropdown li ul li span:hover {
+    color: #5624d0;
+}
+.dropdown > li > ul li > ul {
+    /* Third Level & beyond */
+    display: none;
+    background: white;
+}
+.dropdown > li > ul li:hover > ul {
+    display: block;
+    position: absolute;
+    left: 100%;
+    top: 0;
+    width: 16rem;
+    min-height: 40rem;
+}
+.dropdown > li > ul > li ul > li span {
+    display: block;
+    padding: 0.4rem 1.6rem;
+}
+.dropdown li ul li ul li:hover span {
+    color: #5624d0;
+}
+.dropdown h6 {
+    padding: 0.4rem 1.6rem !important;
+    margin-bottom: 0.3rem;
+}
+.dropdown > li > ul > li ul > li a {
+    display: block;
+    padding: 0.4rem 1.6rem !important;
+}
+.dropdown > li > ul > li ul > li:hover > a {
+    color: #5624d0 !important;
+}

@@ -1,0 +1,21 @@
+.miniFooter {
+    padding: 1.2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    background: #1c1d1f;
+    border-top: 1px solid #3e4143;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.miniFooter a {
+    color: #cec0fc;
+}
+.miniFooter img {
+    margin-right: 1.7rem;
+}
+.content-mini {
+    min-width: 40px;
+}

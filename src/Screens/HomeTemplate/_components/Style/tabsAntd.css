@@ -1,0 +1,26 @@
+.ant-tabs-tab {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #6a6f73;
+}
+.ant-tabs-content {
+    border: 1px solid #d1d7dc;
+    padding: 2rem;
+}
+.ant-tabs-tab:hover {
+    color: black;
+}
+.ant-tabs-tab-active {
+    color: black !important;
+    border-bottom: none !important;
+}
+.ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
+    color: black !important;
+}
+
+.ant-tabs-ink-bar-animated {
+    display: none;
+}
+.ant-tabs {
+    overflow: unset;
+}

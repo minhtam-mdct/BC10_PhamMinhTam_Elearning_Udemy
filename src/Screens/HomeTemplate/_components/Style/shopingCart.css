@@ -1,0 +1,25 @@
+.containCart {
+    max-height: 20rem;
+    overflow-y: auto;
+}
+.containCart .itemCart {
+    display: flex;
+    min-height: 3rem;
+    align-items: center;
+}
+.containCart a:hover {
+    color: #5624d0 !important;
+}
+.itemCart:hover {
+    color: #5624d0;
+}
+.containCart .cartContent {
+    width: 100%;
+    color: #000 !important;
+}
+.cancelBtn {
+    @apply font-semibold;
+}
+.cancelBtn:hover {
+    @apply text-red-700 animate-bounce !important;
+}

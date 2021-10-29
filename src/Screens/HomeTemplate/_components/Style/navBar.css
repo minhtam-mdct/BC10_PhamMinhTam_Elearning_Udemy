@@ -1,0 +1,39 @@
+.navBar {
+    position: relative;
+    box-shadow: 0 2px 4px rgb(0 0 0 / 8%), 0 4px 12px rgb(0 0 0 / 8%);
+    z-index: 1000;
+}
+.poper-hover {
+    position: relative;
+}
+.poper-hover button:hover {
+    color: #5624d0;
+}
+.content {
+    position: absolute;
+    display: none;
+    color: #1c1d1f;
+}
+
+.poper-hover:hover .content {
+    display: block;
+    z-index: 999;
+}
+.content-border {
+    padding: 1rem;
+    text-align: center;
+    min-width: 20rem;
+    right: 0;
+    box-shadow: 0 2px 4px rgb(0 0 0 / 8%), 0 4px 12px rgb(0 0 0 / 8%);
+    color: #1c1d1f;
+}
+
+.empty-cart {
+    color: #6a6f73;
+}
+.goShopping {
+    color: #5624d0;
+}
+.goShopping:hover {
+    color: #401b9c;
+}

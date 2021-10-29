@@ -1,0 +1,56 @@
+.auth {
+    width: 380px;
+}
+.title {
+    border-bottom: solid 1px #d1d7dc;
+}
+.content-auth a {
+    width: 100%;
+    height: 48px;
+    margin-bottom: 8px;
+    font-size: 16px;
+    font-weight: 700;
+    align-items: center;
+    color: #1c1d1f;
+    background-color: #fff;
+    border: 1px solid #d1d7dc;
+    box-shadow: 0 2px 2px 0 rgb(28 29 31 / 24%), 0 0 2px 0 rgb(28 29 31 / 12%);
+}
+.content-auth a:hover {
+    color: #401b9c;
+    background-color: #f7f9fa;
+}
+.content-auth i {
+    font-size: 24px;
+    height: 24px;
+    width: 48px;
+    text-align: center;
+}
+.content-auth .fa-facebook {
+    color: #1877f2;
+}
+.content-auth .fa-apple {
+    color: #1c1d1f;
+}
+.content-auth a:hover .fa-apple {
+    color: #401b9c;
+}
+.fa-user,
+.fa-lock {
+    color: #6a6f73;
+    font-size: 16px;
+    left: 8px;
+}
+.findPW {
+    color: #5624d0;
+}
+.findPW:hover {
+    color: #401b9c;
+}
+.line {
+    border-top: 1px solid #d1d7dc;
+    height: 1px;
+}
+.text-xxs {
+    font-size: 10px;
+}

@@ -1,0 +1,43 @@
+.slick-slide {
+    padding: 0 0.5rem;
+}
+.slick-prev,
+.slick-next {
+    width: 50px;
+    height: 50px;
+    z-index: 99;
+    outline: none;
+    background-color: black;
+    border-radius: 100%;
+    background-size: cover;
+    top: 35%;
+}
+.slick-next,
+.slick-next:hover,
+.slick-next:focus {
+    background-image: url("../../../../Components/img/chevron-right-regular-36.png") !important;
+}
+.slick-prev,
+.slick-prev:hover,
+.slick-prev:focus {
+    background-image: url("../../../../Components/img/chevron-left-regular-36.png") !important;
+}
+.slick-prev:hover,
+.slick-prev:focus,
+.slick-next:hover,
+.slick-next:focus {
+    outline: none;
+    background: black;
+    background-size: cover;
+}
+.slick-prev:before,
+.slick-next:before {
+    content: none;
+}
+.slick-disabled {
+    display: none !important;
+}
+.bg-course {
+    background-color: #1c1d1f;
+    border: 1px solid #d1d7dc;
+}
