@@ -8,9 +8,6 @@ import { getCourseInCartAction } from "../../../../services/moduleCourseNotAppro
 import { NavLink } from "react-router-dom/cjs/react-router-dom.min";
 
 class ShopingCart extends Component {
-  //   componentDidMount() {
-  //     this.props.getCourseInCart();
-  //   }
   handleContentCart = () => {
     if (localStorage.getItem("USER_LOGIN")) {
       const { loading, courseInCart } = this.props;
@@ -18,7 +15,7 @@ class ShopingCart extends Component {
       if (courseInCart) {
         const khoaHoc = [];
         khoaHoc.push(courseInCart.chiTietKhoaHocGhiDanh);
-        console.log(khoaHoc);
+
         return khoaHoc.map((course) => {
           if (course.length !== 0) {
             return course.map((chiTiet) => {

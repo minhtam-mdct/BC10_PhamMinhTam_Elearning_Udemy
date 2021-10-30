@@ -6,7 +6,7 @@ import { actFetchCourseApprovedWithUser } from "./modules/CoursesApproved/action
 import { approvedAction } from "../../../../services/Approved/action";
 import { cancelCartAction } from "../../../../services/moduleCancelCourse/action";
 import Loader from "../../../../Components/Loader";
-export default function View_approve(props) {
+export default function ViewApprove(props) {
   const loading = useSelector(
     (state) => state.listCourseNotApprovedYetWithUser.loading
   );

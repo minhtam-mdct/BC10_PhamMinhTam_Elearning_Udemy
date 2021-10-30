@@ -1,14 +1,14 @@
-import { connect, useDispatch, useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import React, { useEffect, useState } from "react";
 import { actFetchCourseData } from "./modules/action";
 import { deleteCourseAction } from "./deleteCourse/action";
 import Loader from "../../../Components/Loader";
-import View_CourseApprove from "./view_approve/view_approve";
+import ViewCourseApprove from "./view_approve/view_approve";
 import EditCourse from "./editCourse";
 import AddCourse from "./addCourse";
 import { Pagination } from "antd";
 
-export default function course(props) {
+export default function Course(props) {
   const dispatch = useDispatch();
 
   const [keyCourse, setKeyCourse] = useState("");
@@ -50,7 +50,7 @@ export default function course(props) {
             <td>{course.nguoiTao.hoTen}</td>
             <td>{course.danhMucKhoaHoc.tenDanhMucKhoaHoc}</td>
             <td className="flex justify-center">
-              <View_CourseApprove course={course} />
+              <ViewCourseApprove course={course} />
               <EditCourse
                 course={course}
                 keyCourse={keyCourse}

@@ -1,14 +1,14 @@
-import { connect, useDispatch, useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import React, { useEffect, useState } from "react";
 import { actFetchUsersWithSearch } from "./modules/action";
 import Loader from "../../../Components/Loader";
-import View_approve from "./view_approve/view_approve";
+import ViewApprove from "./view_approve/view_approve";
 import EditUser from "./editUser";
 import { deleteUserAction } from "./deleteUser/action";
 import AddUser from "./addUser";
 import { Pagination } from "antd";
 
-export default function students(props) {
+export default function Students(props) {
   const dispatch = useDispatch();
   const [keyUser, setKeyUser] = useState("");
   const [current, setCurrent] = useState(1);
@@ -50,7 +50,7 @@ export default function students(props) {
             <td>{users.email}</td>
             <td>{users.tenLoaiNguoiDung}</td>
             <td className="flex justify-center">
-              <View_approve users={users} />
+              <ViewApprove users={users} />
               <EditUser users={users} keyUser={keyUser} current={current} />
               <button
                 className="btnAction border-2 border-red-500 px-3 py-1 text-red-500 hover:text-black hover:bg-red-500 rounded"

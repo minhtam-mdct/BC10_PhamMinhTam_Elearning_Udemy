@@ -63,7 +63,6 @@ class Navbar extends Component {
     }
   };
   render() {
-    console.log(1);
     const { visible } = this.state;
     return (
       <div className="navBar">

@@ -7,7 +7,6 @@ export const getCourseInCartAction = () => {
       dispatch(actCourseInCartActionReq());
       const res = await manageUser.getCourseInCart();
       dispatch(CourseInCartActionSuccess(res.data));
-      console.log(res.data);
     } catch (res) {
       dispatch(actCourseInCartActionFail(res));
     }

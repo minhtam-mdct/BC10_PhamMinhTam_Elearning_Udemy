@@ -7,7 +7,7 @@ import { connect } from "react-redux";
 import { Popover } from "antd";
 import { Link } from "react-router-dom";
 import { addCartAction } from "../../../../../services/moduleAddToCart/action";
-import { getCourseInCartAction } from "../../../../../services/moduleCourseNotApprovedYet/action";
+
 function SampleNextArrow(props) {
   const { className, style, onClick } = props;
   return (
@@ -37,7 +37,6 @@ class SlickCourse extends Component {
     if (loading) return <Loader />;
     if (data) {
       return data.map((course) => {
-        console.log(course);
         return (
           <Popover
             className="px-2"
@@ -51,12 +50,12 @@ class SlickCourse extends Component {
                 <button
                   onClick={() => {
                     if (localStorage.getItem("USER_LOGIN")) {
-                      this.state = {
+                      let info = {
                         maKhoaHoc: course.maKhoaHoc,
                         taiKhoan: this.props.dataUser.taiKhoan,
                       };
-                      console.log(this.state);
-                      this.props.courseToCart(this.state);
+
+                      this.props.courseToCart(info);
                     } else {
                       alert("Please Login");
                       window.open("/login");

@@ -1,9 +1,6 @@
 import { baseService } from "./baseServices";
 
 export class QuanLyNguoiDung extends baseService {
-  constructor() {
-    super();
-  }
   login = (infoLogin) => {
     return this.post(`/api/QuanLyNguoiDung/DangNhap`, infoLogin);
   };

@@ -7,7 +7,6 @@ import { actFetchUserNotApprovedYetWithCourse } from "../../Screens/AdminTemplat
 export const approvedAction = (info) => {
   return async (dispatch) => {
     try {
-      let idCourse = { maKhoaHoc: info.maKhoaHoc };
       let idUser = { taiKhoan: info.taiKhoan };
       const res = await manageCourse.approveCourse(info);
 

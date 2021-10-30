@@ -6,7 +6,7 @@ import { actFetchUserNotApprovedYetWithCourse } from "./modules/UsersNotApproved
 import { approvedUserAction } from "../../../../services/Approved/action";
 import { cancelUserCartAction } from "../../../../services/moduleCancelCourse/action";
 
-export default function View_CourseApprove(props) {
+export default function ViewCourseApprove(props) {
   const dispatch = useDispatch();
   const dataUsersNotApprovedYet = useSelector(
     (state) => state.listUserNotApprovedYetWithCourseReducer.data

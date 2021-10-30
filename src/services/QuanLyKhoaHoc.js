@@ -1,9 +1,6 @@
 import { baseService } from "./baseServices";
 
 export class QuanLyKhoaHoc extends baseService {
-  constructor() {
-    super();
-  }
   getAllCourse = () => {
     return this.get(`/api/QuanLyKhoaHoc/LayDanhSachKhoaHoc?MaNhom=GP09`);
   };
