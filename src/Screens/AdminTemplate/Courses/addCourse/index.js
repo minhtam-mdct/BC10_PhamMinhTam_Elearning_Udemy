@@ -1,4 +1,4 @@
-import React, { Fragment, useState } from "react";
+import React, { Fragment, useState, useEffect } from "react";
 import { Modal } from "antd";
 import { Field, ErrorMessage, Formik, Form } from "formik";
 // import ErrorMessage from "../../../../services/ErrorMessage";
@@ -12,11 +12,16 @@ export default function AddCourse(props) {
   const { keyUser, current } = props;
   const alertClass = `font-semibold italic text-red-700`;
   const [isModalVisible, setIsModalVisible] = useState(false);
-  const [imgSrc, setImgSrc] = useState(
-    `https://cdn4.vectorstock.com/i/1000x1000/90/48/picture-icon-image-symbol-vector-20419048.jpg`
-  );
+  const [imgSrc, setImgSrc] = useState();
+  const [idKhoaHoc, setIdKhoaHoc] = useState();
   const validate = Validate.CourseSchema;
+  useEffect(() => {
+    setImgSrc(null);
+    setIdKhoaHoc(new Date().getTime().toString());
+  }, []);
   const showModal = () => {
+    setImgSrc(null);
+    setIdKhoaHoc(new Date().getTime().toString());
     setIsModalVisible(true);
   };
 
@@ -26,11 +31,20 @@ export default function AddCourse(props) {
 
   const handleCancel = () => {
     setIsModalVisible(false);
+    setImgSrc(null);
   };
-  const day = new Date().getDate();
-  const month = new Date().getMonth();
-  const year = new Date().getFullYear();
-  const ngayTao = `${day}/${month + 1}/${year}`;
+
+  let day = new Date().getDate().toString();
+  if (day.length === 1) {
+    day = "0" + day;
+  }
+  let month = new Date().getMonth();
+  month = month + 1;
+  if (month.length === 1) {
+    month = "0" + month.toString();
+  }
+  const year = new Date().getFullYear().toString();
+  const ngayTao = `${day}/${month}/${year}`;
 
   return (
     <Fragment>
@@ -54,7 +68,7 @@ export default function AddCourse(props) {
       >
         <Formik
           initialValues={{
-            maKhoaHoc: new Date().getTime().toString(),
+            maKhoaHoc: idKhoaHoc,
             biDanh: "",
             tenKhoaHoc: "",
             moTa: "",
@@ -80,7 +94,10 @@ export default function AddCourse(props) {
                 }
               }
             }
-            dispatch(addCourseAction(formData, keyUser, current));
+            dispatch(
+              addCourseAction(formData, keyUser, current),
+              setImgSrc(null)
+            );
 
             handleOk();
             actions.resetForm();
@@ -91,6 +108,7 @@ export default function AddCourse(props) {
               <h1>Mã Khóa Học:</h1>
               <div className="w-auto h-14 mb-2 pr-2 flex items-center btn-search">
                 <Field
+                  value={idKhoaHoc}
                   name="maKhoaHoc"
                   className="w-11/12 px-3 outline-none text-base"
                   type="text"
@@ -185,7 +203,7 @@ export default function AddCourse(props) {
                   }
                 }}
               />
-              <img width={200} src={imgSrc} />
+              <img width={200} src={imgSrc} alt="demoCourse" />
               <h1>Danh Mục Khóa Học:</h1>
               <div className="block text-left w-full m-0 selectStyle">
                 <Field as="select" name="maDanhMucKhoaHoc">
