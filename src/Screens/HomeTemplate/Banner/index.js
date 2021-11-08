@@ -10,17 +10,17 @@ export default class Banner extends Component {
             src={bannerPic}
             alt="Banner-Udemy"
           />
-          <div className="absolute p-8 top-6 shadow left-10 bg-white w-4/12">
-            <h1 className="font-serif text-3xl font-bold">
+          <div className="sm:relative sm:w-full sm:p-4 sm:left-0 sm:top-4 lg:absolute lg:p-8 lg:top-6 shadow lg:left-10 bg-white lg:w-4/12 xl:h-80">
+            <h1 className="font-serif text-3xl font-bold xl:text-5xl">
               Learning that gets you
             </h1>
-            <p className="text-lg leading-6">
+            <p className="text-lg leading-6 xl:text-xl">
               Skills for your present (and your future). Get started with us.
             </p>
             <div className="relative">
-              <div className="bg-white h-11 items-center btn-search">
+              <div className="bg-white h-11 xl:h-12 items-center btn-search">
                 <input
-                  className=" w-10/12 my-2 ml-2 text-gray-700 outline-none text-base inline-block"
+                  className="w-10/12 my-2 ml-2 text-gray-700 outline-none text-base inline-block"
                   id="search"
                   type="text"
                   placeholder="Search for anything"

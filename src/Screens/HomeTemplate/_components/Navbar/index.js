@@ -26,7 +26,7 @@ class Navbar extends Component {
   isLogin = () => {
     if (localStorage.getItem("USER_LOGIN")) {
       return (
-        <div className="poper-hover px-2">
+        <div className="sm:ml-auto md:ml-0 poper-hover px-2">
           <button className=" font-bold h-16 w-auto">
             Hello: {this.props.data.hoTen}
           </button>
@@ -47,7 +47,7 @@ class Navbar extends Component {
       );
     } else {
       return (
-        <div>
+        <div className="sm:ml-auto">
           <button className="light-btn w-20 h-10 font-bold ml-2">
             <NavLink activeClassName="active" className="nav-link" to="/login">
               Log in
@@ -74,10 +74,11 @@ class Navbar extends Component {
               alt="https://www.udemy.com/staticx/udemy/images/v7/logo-udemy.svg"
             />
           </NavLink>
+
           <Dropdwn />
 
-          <div className="flex-1 p-2 relative">
-            <div className="bg-white h-11 pr-2 flex items-center rounded-full btn-search">
+          <div className="sm:hidden md:flex flex-1 p-2 relative ">
+            <div className="bg-white w-full h-11 pr-2 flex items-center rounded-full btn-search">
               <div className="px-2">
                 <button className="text-white focus:outline-none w-8 flex items-center justify-center">
                   <box-icon name="search-alt-2"></box-icon>
@@ -91,36 +92,39 @@ class Navbar extends Component {
               />
             </div>
           </div>
-
-          <div className="poper-hover px-2">
-            <button className=" h-16 w-auto">Udemy Bussiness</button>
-            <div className="mt-2">
-              <div className="content content-border bg-white">
-                <h1 className=" text-xl font-bold leading-tight mb-3">
-                  Get your team access to over 6,000 top Udemy courses, anytime,
-                  anywhere.
-                </h1>
-                <button className="dark-btn w-11/12 h-12 font-extrabold">
-                  Try Udemy Bussiness
-                </button>
+          <div className="sm:hidden md:hidden lg:flex">
+            <div className="poper-hover px-2">
+              <button className=" h-16 w-auto">Udemy Bussiness</button>
+              <div className="mt-2">
+                <div className="content content-border bg-white">
+                  <h1 className=" text-xl font-bold leading-tight mb-3">
+                    Get your team access to over 6,000 top Udemy courses,
+                    anytime, anywhere.
+                  </h1>
+                  <button className="dark-btn w-11/12 h-12 font-extrabold">
+                    Try Udemy Bussiness
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div className="poper-hover px-2">
+              <button className=" h-16 w-auto">Teach on Udemy</button>
+              <div className="mt-2">
+                <div className="content content-border bg-white">
+                  <h1 className=" text-xl font-bold leading-tight mb-3">
+                    Turn what you know into an opportunity and reach millions
+                    around the world.
+                  </h1>
+                  <button className="dark-btn w-11/12 h-12 font-extrabold">
+                    Learn more
+                  </button>
+                </div>
               </div>
             </div>
           </div>
-          <div className="poper-hover px-2">
-            <button className=" h-16 w-auto">Teach on Udemy</button>
-            <div className="mt-2">
-              <div className="content content-border bg-white">
-                <h1 className=" text-xl font-bold leading-tight mb-3">
-                  Turn what you know into an opportunity and reach millions
-                  around the world.
-                </h1>
-                <button className="dark-btn w-11/12 h-12 font-extrabold">
-                  Learn more
-                </button>
-              </div>
-            </div>
+          <div className="sm:ml-auto">
+            <ShopingCart />
           </div>
-          <ShopingCart />
           {/* show info */}
           {this.isLogin()}
           <button

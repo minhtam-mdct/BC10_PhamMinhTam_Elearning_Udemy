@@ -3,7 +3,7 @@ import { Modal, DatePicker } from "antd";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Validate from "../../../../services/validate/validateCourse.js";
 import moment from "moment";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { editCourseAction } from "./modules/action";
 
 export default function EditCourse(props) {
@@ -191,6 +191,7 @@ export default function EditCourse(props) {
                 style={{ margin: "7px auto" }}
                 width={200}
                 src={imgSrc === "" ? course.hinhAnh : imgSrc}
+                alt="demoCourse"
               />
               <h1>Danh Mục Khóa Học:</h1>
               <div className="block text-left w-full m-0 selectStyle">

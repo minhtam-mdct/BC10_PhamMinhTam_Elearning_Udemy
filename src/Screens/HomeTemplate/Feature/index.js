@@ -5,8 +5,8 @@ export default class Feature extends Component {
     return (
       <div className="container">
         <h1 className="text-2xl font-bold">Featured topics by category</h1>
-        <div className="flex">
-          <div className="w-1/4 featured">
+        <div className="sm:ml-auto sm:flex-wrap md:flex">
+          <div className="sm:w-full sm:text-center md:w-1/2 md:text-left lg:w-1/4 featured">
             <h1 className="text-xl font-bold mt-3">Development</h1>
             <div className="mt-4">
               <div>
@@ -33,7 +33,7 @@ export default class Feature extends Component {
               </div>
             </div>
           </div>
-          <div className="w-1/4 featured">
+          <div className="sm:w-full sm:text-center md:w-1/2 md:text-left lg:w-1/4 featured">
             <h1 className="text-xl font-bold mt-3">Business</h1>
             <div className="mt-4">
               <div>
@@ -60,7 +60,7 @@ export default class Feature extends Component {
               </div>
             </div>
           </div>
-          <div className="w-1/4 featured">
+          <div className="sm:w-full sm:text-center md:w-1/2 md:text-left lg:w-1/4 featured">
             <h1 className="text-xl font-bold mt-3">IT and Software</h1>
             <div className="mt-4">
               <div>
@@ -87,7 +87,7 @@ export default class Feature extends Component {
               </div>
             </div>
           </div>
-          <div className="w-1/4 featured">
+          <div className="sm:w-full sm:text-center md:w-1/2 md:text-left lg:w-1/4 featured">
             <h1 className="text-xl font-bold mt-3">Design</h1>
             <div className="mt-4">
               <div>
@@ -115,9 +115,11 @@ export default class Feature extends Component {
             </div>
           </div>
         </div>
-        <button className="light-btn w-auto h-10 font-bold px-3 mt-6">
-          Explore more topics
-        </button>
+        <div className="w-full sm:flex sm:justify-center md:block">
+          <button className=" light-btn w-auto h-10 font-bold px-3 mt-6">
+            Explore more topics
+          </button>
+        </div>
       </div>
     );
   }

@@ -4,7 +4,7 @@ export default class GetAboutUdemy extends Component {
   render() {
     return (
       <div className="flex items-center justify-center">
-        <div className="flex w-4/5">
+        <div className="flex sm:flex-col lg:flex-row w-4/5">
           <img
             className="mr-20"
             src={instructor}
@@ -15,7 +15,7 @@ export default class GetAboutUdemy extends Component {
             <h3 className="font-serif font-bold text-4xl tracking-tight">
               Transform your life through education
             </h3>
-            <p className=" text-lg">
+            <p className="text-lg">
               Learners around the world are launching new careers, advancing in
               their fields, and enriching their lives.
             </p>

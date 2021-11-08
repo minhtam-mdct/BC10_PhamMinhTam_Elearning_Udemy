@@ -4,7 +4,7 @@ export default class UdemyBusiness extends Component {
   render() {
     return (
       <div className="flex items-center justify-center">
-        <div className="flex w-4/5">
+        <div className="flex sm:flex-col-reverse lg:flex-row w-4/5">
           <div className="flex flex-col justify-center mr-20">
             <img
               style={{ width: "282px", height: "48px" }}

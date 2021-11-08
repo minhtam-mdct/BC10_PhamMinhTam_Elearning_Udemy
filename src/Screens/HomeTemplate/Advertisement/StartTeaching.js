@@ -4,7 +4,7 @@ export default class StartTeaching extends Component {
   render() {
     return (
       <div className="flex items-center justify-center">
-        <div className="flex w-4/5">
+        <div className="flex sm:flex-col lg:flex-row w-4/5">
           <img
             className="mr-20"
             src={instructor}

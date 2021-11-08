@@ -1,6 +1,7 @@
 import React, { Fragment } from "react";
 import { Route, Redirect } from "react-router-dom";
 import NavbarAdmin from "./_component/NavbarAdmin/index.js";
+import Footer from "../HomeTemplate/_components/Footer";
 import "./_component/StyleAdmin/AddBtn.css";
 import "./_component/StyleAdmin/modal.css";
 
@@ -9,6 +10,7 @@ function LayoutAdmin(props) {
     <Fragment>
       {<NavbarAdmin />}
       {props.children}
+      <Footer />
     </Fragment>
   );
 }

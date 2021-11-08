@@ -47,8 +47,8 @@ export default function Students(props) {
         return (
           <tr className="border-b-2 hover:bg-gray-300">
             <td>{users.hoTen}</td>
-            <td>{users.email}</td>
-            <td>{users.tenLoaiNguoiDung}</td>
+            <td className="res-td2">{users.email}</td>
+            <td className="res-td3">{users.tenLoaiNguoiDung}</td>
             <td className="flex justify-center">
               <ViewApprove users={users} />
               <EditUser users={users} keyUser={keyUser} current={current} />
@@ -89,13 +89,13 @@ export default function Students(props) {
           <AddUser keyUser={keyUser} current={current} />
         </div>
       </div>
-      <div className="w-full items-center mt-3">
+      <div style={{ overflowX: `auto` }} className="w-full items-center mt-3">
         <table className="w-full text-center relative">
           <thead>
             <tr>
               <th>Fullname</th>
-              <th>Email</th>
-              <th>Type</th>
+              <th className="res-tr2">Email</th>
+              <th className="res-tr3">Type</th>
               <th>Action</th>
             </tr>
           </thead>
